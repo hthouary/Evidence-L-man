@@ -1,0 +1,92 @@
+export const siteConfig = {
+  name: "Évidence Léman",
+  tagline: "Vous méritez d'être trouvé, vu et choisi.",
+  description:
+    "Nous créons et gérons votre site internet de A à Z pour vous apporter plus de visibilité, plus de crédibilité et plus d'opportunités. Sans complexité technique, sans perte de temps.",
+  url: "https://evidencelemanl.ch",
+  email: "contact@evidencelemanl.ch",
+  phone: "+33 6 00 00 00 00",
+  whatsapp: "https://wa.me/33600000000",
+  calendly: "https://calendly.com/evidencelemanl",
+  address: "Haute-Savoie, France",
+  pricing: {
+    setup: 199,
+    monthly: 49,
+    trial: 3,
+    commitment: 12,
+  },
+  demos: [
+    {
+      id: "restaurant-leman",
+      name: "Restaurant du Léman",
+      type: "Restaurant",
+      description:
+        "Site élégant pour un restaurant avec menu, réservations et galerie photos.",
+      url: null as string | null,
+    },
+    {
+      id: "maison-horizon",
+      name: "Maison Horizon",
+      type: "Boutique locale",
+      description:
+        "Vitrine moderne pour une boutique avec catalogue produits et horaires.",
+      url: null as string | null,
+    },
+    {
+      id: "leman-auto",
+      name: "Léman Auto",
+      type: "Garage",
+      description:
+        "Site professionnel pour un garage avec services et prise de rendez-vous.",
+      url: null as string | null,
+    },
+    {
+      id: "atelier-horizon",
+      name: "Atelier Horizon",
+      type: "Artisan",
+      description:
+        "Présentation soignée des réalisations et du savoir-faire artisanal.",
+      url: null as string | null,
+    },
+    {
+      id: "villa-piscines",
+      name: "Villa Piscines",
+      type: "Pisciniste",
+      description:
+        "Site premium pour un pisciniste avec galerie, services et devis en ligne.",
+      url: null as string | null,
+    },
+  ],
+  faq: [
+    {
+      question: "Dois-je m'occuper de l'hébergement ?",
+      answer:
+        "Non, tout est inclus. Nous gérons l'hébergement de votre site de A à Z. Vous n'avez rien à configurer, rien à gérer.",
+    },
+    {
+      question: "Dois-je acheter un nom de domaine ?",
+      answer:
+        "Non, le nom de domaine est inclus dans votre abonnement mensuel. Nous nous occupons de l'enregistrement et du renouvellement.",
+    },
+    {
+      question: "Dois-je effectuer des mises à jour ?",
+      answer:
+        "Non, nous gérons toutes les mises à jour techniques. Votre site reste toujours sécurisé et performant sans que vous ayez à intervenir.",
+    },
+    {
+      question: "Puis-je demander des modifications ?",
+      answer:
+        "Oui, les modifications mineures (textes, photos, horaires…) sont incluses dans votre abonnement mensuel. Il suffit de nous contacter.",
+    },
+    {
+      question: "Combien de temps faut-il ?",
+      answer:
+        "En général, votre site est en ligne en 5 à 10 jours ouvrés après notre premier échange.",
+    },
+    {
+      question: "Que se passe-t-il après les 3 mois d'essai ?",
+      answer:
+        "L'abonnement mensuel de 49 €/mois continue automatiquement. Vous pouvez résilier à tout moment en respectant un préavis d'un mois.",
+    },
+  ],
+};
