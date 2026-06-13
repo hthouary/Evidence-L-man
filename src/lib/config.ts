@@ -9,6 +9,12 @@ export const siteConfig = {
   whatsapp: "https://wa.me/33600000000",
   calendly: "https://calendly.com/hugo-thouary-digital",
   address: "Haute-Savoie, France",
+  // Affiche / masque les canaux de contact. Passe à `true` pour réactiver.
+  contactChannels: {
+    calendly: true,
+    whatsapp: false,
+    email: false,
+  },
   pricing: {
     setup: 199,
     monthly: 49,

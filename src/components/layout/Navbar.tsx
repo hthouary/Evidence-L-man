@@ -73,15 +73,17 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-2.5">
-            <Button
-              href={siteConfig.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="ghost"
-              size="sm"
-            >
-              WhatsApp
-            </Button>
+            {siteConfig.contactChannels.whatsapp && (
+              <Button
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="ghost"
+                size="sm"
+              >
+                WhatsApp
+              </Button>
+            )}
             <Button
               href={siteConfig.calendly}
               target="_blank"
@@ -122,17 +124,19 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex flex-col gap-3 pt-4">
-            <Button
-              href={siteConfig.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              size="lg"
-              className="w-full"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              WhatsApp
-            </Button>
+            {siteConfig.contactChannels.whatsapp && (
+              <Button
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline"
+                size="lg"
+                className="w-full"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                WhatsApp
+              </Button>
+            )}
             <Button
               href={siteConfig.calendly}
               target="_blank"

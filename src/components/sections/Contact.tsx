@@ -5,8 +5,9 @@ import { siteConfig } from "@/lib/config";
 import { Calendar, MessageCircle, Mail, Send } from "lucide-react";
 import Button from "@/components/ui/Button";
 
-const channels = [
+const allChannels = [
   {
+    key: "calendly" as const,
     icon: Calendar,
     title: "Prendre rendez-vous",
     description: "Choisissez un créneau qui vous convient. 20 minutes suffisent.",
@@ -16,6 +17,7 @@ const channels = [
     bg: "bg-[#1E3A5F]/[0.06]",
   },
   {
+    key: "whatsapp" as const,
     icon: MessageCircle,
     title: "WhatsApp",
     description: "Envoyez-nous un message directement. Réponse rapide garantie.",
@@ -25,6 +27,7 @@ const channels = [
     bg: "bg-[#25D366]/10",
   },
   {
+    key: "email" as const,
     icon: Mail,
     title: "Email",
     description: "Vous préférez l'email ? Nous répondons sous 24 heures.",
@@ -34,6 +37,10 @@ const channels = [
     bg: "bg-[#7A9B8E]/12",
   },
 ];
+
+const channels = allChannels.filter(
+  (c) => siteConfig.contactChannels[c.key]
+);
 
 const inputClass =
   "w-full rounded-xl border border-[#1E3A5F]/12 bg-[#FAFAF8] px-4 py-3 text-sm text-[#1E3A5F] placeholder-[#5F7285]/40 transition-all focus:border-[#1E3A5F]/30 focus:outline-none focus:ring-2 focus:ring-[#1E3A5F]/15";
@@ -72,7 +79,15 @@ export default function Contact() {
         </div>
 
         {/* Channels */}
-        <div className="mb-12 grid gap-6 md:grid-cols-3 lg:mb-16">
+        <div
+          className={`mx-auto mb-12 grid gap-6 lg:mb-16 ${
+            channels.length === 1
+              ? "max-w-md"
+              : channels.length === 2
+                ? "max-w-2xl sm:grid-cols-2"
+                : "md:grid-cols-3"
+          }`}
+        >
           {channels.map((c) => (
             <a
               key={c.title}

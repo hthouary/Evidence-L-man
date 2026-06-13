@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Calendar } from "lucide-react";
 
 const navLinks = [
   { label: "Nos réalisations", href: "#realisations" },
@@ -60,22 +60,26 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={`mailto:${siteConfig.email}`}
+                  href={siteConfig.calendly}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors text-sm font-light"
                 >
-                  <Mail size={13} />
-                  {siteConfig.email}
+                  <Calendar size={13} />
+                  Prendre rendez-vous
                 </a>
               </li>
-              <li>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors text-sm font-light"
-                >
-                  <Phone size={13} />
-                  {siteConfig.phone}
-                </a>
-              </li>
+              {siteConfig.contactChannels.email && (
+                <li>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="flex items-center gap-2 text-white/40 hover:text-white/80 transition-colors text-sm font-light"
+                  >
+                    <Mail size={13} />
+                    {siteConfig.email}
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>
