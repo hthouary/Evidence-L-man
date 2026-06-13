@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Waves, Droplets, Sparkles, Sun, Phone } from "lucide-react";
+import { Waves, Droplets, Sparkles, Sun, Phone, MapPin, Clock, Star, CheckCircle2, Thermometer, Shield, Wifi } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Villa Piscines — Construction & entretien de piscines",
@@ -9,16 +9,89 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { icon: Waves, title: "Construction sur mesure", desc: "Béton, coque ou couloir de nage, selon votre terrain." },
-  { icon: Droplets, title: "Entretien & traitement", desc: "Contrats annuels pour une eau toujours parfaite." },
-  { icon: Sparkles, title: "Rénovation", desc: "Liner, margelles, mise aux normes et embellissement." },
-  { icon: Sun, title: "Domotique & chauffage", desc: "Pilotez votre bassin depuis votre smartphone." },
+  {
+    icon: Waves,
+    title: "Construction sur mesure",
+    desc: "Béton armé, coque polyester ou couloir de nage. Chaque réalisation est unique, adaptée à votre terrain et vos envies.",
+    price: "À partir de 25 000 €",
+  },
+  {
+    icon: Droplets,
+    title: "Entretien & traitement",
+    desc: "Contrats annuels ou à la séance. Analyse d'eau, équilibrage chimique, nettoyage complet pour une eau toujours cristalline.",
+    price: "À partir de 49 €/mois",
+  },
+  {
+    icon: Sparkles,
+    title: "Rénovation",
+    desc: "Remplacement de liner, margelles, carrelage. Mise aux normes sécurité. Embellissement de bassins existants.",
+    price: "Sur devis",
+  },
+  {
+    icon: Sun,
+    title: "Terrasse & abords",
+    desc: "Plage de piscine en pierre naturelle, bois composite ou béton désactivé. Clôtures et portillons de sécurité.",
+    price: "Sur devis",
+  },
+  {
+    icon: Thermometer,
+    title: "Chauffage & pompe à chaleur",
+    desc: "Installation de pompes à chaleur, couvertures solaires et systèmes de chauffage pour profiter de votre piscine 9 mois/an.",
+    price: "À partir de 3 500 €",
+  },
+  {
+    icon: Wifi,
+    title: "Domotique & automatisation",
+    desc: "Pilotez votre bassin depuis votre smartphone. Contrôle du pH, chlore, température et éclairage à distance.",
+    price: "À partir de 1 800 €",
+  },
 ];
 
 const gallery = [
   "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1519046346009-6e5e9d5e3b06?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+];
+
+const reviews = [
+  {
+    name: "Éric & Valérie T.",
+    note: 5,
+    text: "Villa Piscines a construit notre piscine en 8 semaines exactement comme promis. Le résultat est splendide, le suivi impeccable. On est ravis à 100%.",
+    date: "Été 2024",
+    projet: "Construction béton 10×5m",
+  },
+  {
+    name: "Bernard M.",
+    note: 5,
+    text: "J'ai souscrit au contrat d'entretien annuel. L'équipe vient chaque semaine, l'eau est toujours parfaite. Un vrai service professionnel.",
+    date: "2024",
+    projet: "Entretien annuel",
+  },
+  {
+    name: "Christelle R.",
+    note: 5,
+    text: "Rénovation complète de notre ancienne piscine. Nouveau liner, nouvelles margelles, pompe à chaleur installée. Le tout en moins de 3 semaines. Bravo !",
+    date: "Printemps 2024",
+    projet: "Rénovation complète",
+  },
+];
+
+const faq = [
+  {
+    q: "Combien de temps dure la construction d'une piscine ?",
+    a: "En moyenne 6 à 10 semaines pour une piscine béton standard. Une piscine à coque peut être installée en 2 à 3 semaines. Nous établissons un planning précis dès la signature du contrat.",
+  },
+  {
+    q: "Quelle piscine choisir : béton ou coque ?",
+    a: "La piscine en béton offre une liberté totale de forme et de taille, idéale pour les grands projets. La coque polyester est plus rapide à installer et nécessite moins d'entretien. Nous vous conseillons lors d'une visite gratuite.",
+  },
+  {
+    q: "Proposez-vous un service d'hivernage ?",
+    a: "Oui, nous assurons l'hivernage actif ou passif de votre piscine chaque automne, ainsi que la remise en route au printemps. Ces prestations peuvent être incluses dans un contrat d'entretien annuel.",
+  },
 ];
 
 export default function VillaPiscinesDemo() {
@@ -34,6 +107,7 @@ export default function VillaPiscinesDemo() {
           <div className="hidden items-center gap-8 text-sm font-medium text-[#0c2e36]/70 md:flex">
             <a href="#services" className="hover:text-[#0aa3b8]">Services</a>
             <a href="#realisations" className="hover:text-[#0aa3b8]">Réalisations</a>
+            <a href="#avis" className="hover:text-[#0aa3b8]">Avis</a>
             <a href="#devis" className="hover:text-[#0aa3b8]">Devis</a>
           </div>
           <a
@@ -81,7 +155,35 @@ export default function VillaPiscinesDemo() {
                 Voir nos réalisations
               </a>
             </div>
+            <div className="mt-12 grid grid-cols-3 gap-6 sm:flex sm:gap-10">
+              {[
+                ["200+", "piscines construites"],
+                ["15 ans", "d'expertise"],
+                ["4,9/5", "avis clients"],
+              ].map(([v, l]) => (
+                <div key={l}>
+                  <div className="text-3xl font-bold text-[#0aa3b8]">{v}</div>
+                  <div className="text-sm text-white/60">{l}</div>
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Badges */}
+      <section className="border-b border-[#0c2e36]/8 bg-[#f3fbfc]">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-8 px-6 py-8">
+          {[
+            { icon: Shield, text: "Membre PROPISCINES" },
+            { icon: CheckCircle2, text: "Garantie décennale" },
+            { icon: Waves, text: "Devis gratuit sous 48h" },
+          ].map(({ icon: Icon, text }) => (
+            <div key={text} className="flex items-center gap-2 text-sm text-[#0c2e36]/70">
+              <Icon size={16} className="text-[#0aa3b8]" />
+              {text}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -94,8 +196,11 @@ export default function VillaPiscinesDemo() {
           <h2 className="text-4xl font-bold sm:text-5xl">
             Un accompagnement de A à Z
           </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[#0c2e36]/60">
+            De la première ébauche à l&apos;entretien annuel, nous gérons tout pour que vous profitiez simplement de votre piscine.
+          </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div
               key={s.title}
@@ -106,6 +211,7 @@ export default function VillaPiscinesDemo() {
               </div>
               <h3 className="text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm font-light text-[#0c2e36]/60">{s.desc}</p>
+              <div className="mt-4 text-sm font-semibold text-[#0aa3b8]">{s.price}</div>
             </div>
           ))}
         </div>
@@ -127,16 +233,21 @@ export default function VillaPiscinesDemo() {
               Plus de 200 piscines réalisées autour du lac Léman depuis 2009.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {gallery.map((src, i) => (
               <div
                 key={i}
                 className={`relative overflow-hidden rounded-2xl ${
-                  i === 0 ? "md:col-span-2 md:row-span-2" : ""
+                  i === 0 ? "sm:col-span-2 sm:row-span-2" : ""
                 }`}
               >
-                <div className={`relative ${i === 0 ? "aspect-[16/10] h-full" : "aspect-[4/3]"}`}>
-                  <Image src={src} alt="Réalisation de piscine" fill className="object-cover" />
+                <div className={`relative ${i === 0 ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                  <Image
+                    src={src}
+                    alt="Réalisation de piscine"
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                  />
                 </div>
               </div>
             ))}
@@ -144,36 +255,135 @@ export default function VillaPiscinesDemo() {
         </div>
       </section>
 
+      {/* Processus */}
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-14 text-center">
+          <h2 className="text-4xl font-bold sm:text-5xl">Comment ça se passe ?</h2>
+          <p className="mt-4 text-[#0c2e36]/60">De votre appel à la première baignade en 4 étapes.</p>
+        </div>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { step: "01", title: "Visite gratuite", desc: "Nous venons chez vous analyser le terrain et comprendre votre projet." },
+            { step: "02", title: "Devis détaillé", desc: "Plans, matériaux et prix clairs remis sous 48h, sans engagement." },
+            { step: "03", title: "Construction", desc: "Notre équipe intervient dans les délais convenus, sans mauvaise surprise." },
+            { step: "04", title: "Mise en eau", desc: "Nous assurons la mise en eau, le traitement initial et vous formons à l'entretien." },
+          ].map((s) => (
+            <div key={s.step} className="relative rounded-2xl border border-[#0c2e36]/8 bg-[#f3fbfc] p-7">
+              <div className="mb-4 text-4xl font-bold text-[#0aa3b8]/20">{s.step}</div>
+              <h3 className="text-lg font-semibold">{s.title}</h3>
+              <p className="mt-2 text-sm font-light text-[#0c2e36]/60">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Avis */}
+      <section id="avis" className="bg-[#f3fbfc] py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#0aa3b8]">
+              Témoignages
+            </p>
+            <h2 className="text-4xl font-bold sm:text-5xl">
+              Nos clients en parlent
+            </h2>
+            <div className="mt-4 flex items-center justify-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={18} className="fill-[#0aa3b8] text-[#0aa3b8]" />
+              ))}
+              <span className="ml-2 text-sm text-[#0c2e36]/60">4,9 / 5 · Google</span>
+            </div>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {reviews.map((r) => (
+              <div key={r.name} className="rounded-2xl bg-white p-7 shadow-sm">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#0aa3b8]">{r.projet}</div>
+                <div className="mb-4 flex gap-1">
+                  {[...Array(r.note)].map((_, i) => (
+                    <Star key={i} size={14} className="fill-[#0aa3b8] text-[#0aa3b8]" />
+                  ))}
+                </div>
+                <p className="text-sm leading-relaxed text-[#0c2e36]/80">&ldquo;{r.text}&rdquo;</p>
+                <div className="mt-5 flex items-center justify-between">
+                  <span className="font-semibold">{r.name}</span>
+                  <span className="text-xs text-[#0c2e36]/40">{r.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-4xl px-6 py-24">
+        <h2 className="mb-10 text-center text-3xl font-bold">Questions fréquentes</h2>
+        <div className="space-y-4">
+          {faq.map((f) => (
+            <div key={f.q} className="rounded-2xl border border-[#0c2e36]/8 p-6">
+              <h3 className="font-semibold text-[#0c2e36]">{f.q}</h3>
+              <p className="mt-3 text-sm font-light leading-relaxed text-[#0c2e36]/60">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Devis */}
       <section id="devis" className="relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0aa3b8] to-[#06606e]" />
-        <div className="relative mx-auto max-w-3xl px-6 text-center text-white">
-          <h2 className="text-4xl font-bold sm:text-5xl">
-            Lancez votre projet piscine
-          </h2>
-          <p className="mx-auto mt-5 max-w-md text-lg font-light text-white/80">
-            Recevez une étude personnalisée et un devis détaillé sous 48h,
-            gratuitement et sans engagement.
-          </p>
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="#"
-              className="rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#0aa3b8] transition-transform hover:scale-105"
-            >
-              Demander mon devis gratuit
-            </a>
-            <a
-              href="tel:+33450000000"
-              className="inline-flex items-center gap-2 rounded-full border border-white/40 px-8 py-4 text-sm font-semibold transition-colors hover:bg-white/10"
-            >
-              <Phone size={16} /> 04 50 00 00 00
-            </a>
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="text-white">
+              <h2 className="text-4xl font-bold sm:text-5xl">
+                Lancez votre projet piscine
+              </h2>
+              <p className="mt-5 text-lg font-light text-white/80">
+                Recevez une étude personnalisée et un devis détaillé sous 48h,
+                gratuitement et sans engagement.
+              </p>
+              <ul className="mt-8 space-y-3">
+                {[
+                  "Visite à domicile offerte",
+                  "Plans et simulation 3D inclus",
+                  "Devis sous 48h, sans engagement",
+                  "Financement disponible",
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-3 text-white/90">
+                    <CheckCircle2 size={18} className="shrink-0 text-white" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4">
+              <a
+                href="#"
+                className="rounded-full bg-white px-8 py-5 text-center text-sm font-semibold text-[#0aa3b8] transition-transform hover:scale-105"
+              >
+                Demander mon devis gratuit
+              </a>
+              <a
+                href="tel:+33450000000"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-8 py-5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                <Phone size={16} /> 04 50 00 00 00
+              </a>
+              <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white">
+                <div className="flex items-center gap-2 text-sm">
+                  <MapPin size={16} />
+                  <span>Zone Industrielle, 74200 Thonon-les-Bains</span>
+                </div>
+                <div className="mt-2 flex items-center gap-2 text-sm text-white/80">
+                  <Clock size={16} />
+                  <span>Lun – Ven 8h – 18h · Sam 9h – 12h</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-[#0c2e36]/10 py-10 text-center text-sm text-[#0c2e36]/50">
-        Villa Piscines · Construction & entretien · Léman
+        Villa Piscines · Construction & entretien · Léman · Tous droits réservés
       </footer>
     </div>
   );
