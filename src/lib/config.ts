@@ -7,7 +7,7 @@ export const siteConfig = {
   email: "contact@evidencelemanl.ch",
   phone: "+33 6 00 00 00 00",
   whatsapp: "https://wa.me/33600000000",
-  calendly: "https://calendly.com/evidencelemanl",
+  calendly: "https://calendly.com/hugo-thouary-digital",
   address: "Haute-Savoie, France",
   pricing: {
     setup: 199,
