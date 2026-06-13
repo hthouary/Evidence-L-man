@@ -28,7 +28,9 @@ export const siteConfig = {
       type: "Restaurant",
       description:
         "Site élégant pour un restaurant avec menu, réservations et galerie photos.",
-      url: null as string | null,
+      image:
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/restaurant-leman" as string | null,
     },
     {
       id: "maison-horizon",
@@ -36,7 +38,9 @@ export const siteConfig = {
       type: "Boutique locale",
       description:
         "Vitrine moderne pour une boutique avec catalogue produits et horaires.",
-      url: null as string | null,
+      image:
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/maison-horizon" as string | null,
     },
     {
       id: "leman-auto",
@@ -44,7 +48,9 @@ export const siteConfig = {
       type: "Garage",
       description:
         "Site professionnel pour un garage avec services et prise de rendez-vous.",
-      url: null as string | null,
+      image:
+        "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/leman-auto" as string | null,
     },
     {
       id: "atelier-horizon",
@@ -52,7 +58,9 @@ export const siteConfig = {
       type: "Artisan",
       description:
         "Présentation soignée des réalisations et du savoir-faire artisanal.",
-      url: null as string | null,
+      image:
+        "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/atelier-horizon" as string | null,
     },
     {
       id: "villa-piscines",
@@ -60,7 +68,47 @@ export const siteConfig = {
       type: "Pisciniste",
       description:
         "Site premium pour un pisciniste avec galerie, services et devis en ligne.",
-      url: null as string | null,
+      image:
+        "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/villa-piscines" as string | null,
+    },
+  ],
+  sectors: [
+    "Restaurants",
+    "Boutiques",
+    "Coiffeurs",
+    "Garages",
+    "Artisans",
+    "Piscinistes",
+    "Paysagistes",
+    "Cavistes",
+    "Instituts",
+    "Fleuristes",
+  ],
+  testimonials: [
+    {
+      quote:
+        "En une semaine, j'avais un site magnifique et mes premières réservations en ligne. Je n'ai eu à m'occuper de rien.",
+      name: "Camille Besson",
+      role: "Restaurant du Léman, Évian",
+      avatar:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+    },
+    {
+      quote:
+        "Mes clients me trouvent enfin sur Google et la boutique n'a jamais autant tourné. Un vrai changement.",
+      name: "Sophie Marin",
+      role: "Maison Horizon, Thonon",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+    },
+    {
+      quote:
+        "Le garage a doublé ses demandes de rendez-vous. Simple, rapide, et un interlocuteur unique qui gère tout.",
+      name: "Thomas Roch",
+      role: "Léman Auto, Annemasse",
+      avatar:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
     },
   ],
   faq: [

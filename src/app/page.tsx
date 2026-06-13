@@ -1,9 +1,11 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import Sectors from "@/components/sections/Sectors";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
 import Realisations from "@/components/sections/Realisations";
 import Process from "@/components/sections/Process";
+import Testimonials from "@/components/sections/Testimonials";
 import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
@@ -14,10 +16,12 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <Sectors />
       <Problem />
       <Solution />
       <Realisations />
       <Process />
+      <Testimonials />
       <Pricing />
       <FAQ />
       <Contact />
