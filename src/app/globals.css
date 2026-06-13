@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-@theme inline {
-  --color-primary: #1E3A5F;
-  --color-secondary: #5F7285;
-  --color-accent: #7A9B8E;
-  --color-background: #FAFAF8;
-  --font-sans: 'Inter', system-ui, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary: #1E3A5F;
+  --secondary: #5F7285;
+  --accent: #7A9B8E;
+  --background: #FAFAF8;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -18,14 +20,14 @@ html {
 }
 
 body {
-  background-color: #FAFAF8;
-  color: #1E3A5F;
+  background-color: var(--background);
+  color: var(--primary);
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: #1E3A5F22;
+  background: #1E3A5F20;
   color: #1E3A5F;
 }

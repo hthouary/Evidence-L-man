@@ -7,8 +7,7 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} — Création de sites internet pour commerces locaux`,
     template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman. Hébergement, maintenance et support inclus.",
+  description: "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman. Hébergement, maintenance et support inclus.",
   keywords: [
     "création site internet Léman",
     "création site internet Haute-Savoie",
@@ -26,15 +25,13 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteConfig.url,
     title: `${siteConfig.name} — Création de sites internet pour commerces locaux`,
-    description:
-      "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman.",
+    description: "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman.",
     siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Création de sites internet pour commerces locaux`,
-    description:
-      "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman.",
+    description: "Création de sites internet professionnels pour restaurants, artisans, boutiques et PME en Haute-Savoie et sur le Léman.",
   },
   robots: {
     index: true,
@@ -58,13 +55,9 @@ export default function RootLayout({
     <html lang="fr" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <script
@@ -74,8 +67,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: siteConfig.name,
-              description:
-                "Création de sites internet professionnels pour commerces locaux en Haute-Savoie",
+              description: "Création de sites internet professionnels pour commerces locaux en Haute-Savoie",
               url: siteConfig.url,
               telephone: siteConfig.phone,
               email: siteConfig.email,
