@@ -53,16 +53,6 @@ export default function Testimonials() {
             </Reveal>
           ))}
         </div>
-        <div className="mt-14 text-center">
-          <a
-            href={siteConfig.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#1E3A5F] px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-105"
-          >
-            Rejoindre nos clients satisfaits →
-          </a>
-        </div>
       </div>
     </section>
   );
