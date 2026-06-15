@@ -1,4 +1,5 @@
 import { Eye, Shield, Sparkles } from "lucide-react";
+import { siteConfig } from "@/lib/config";
 
 const solutions = [
   {
@@ -76,6 +77,14 @@ export default function Solution() {
               Nous nous occupons du reste.
             </span>
           </p>
+          <a
+            href={siteConfig.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-[#1E3A5F] transition-transform hover:scale-105"
+          >
+            Je veux mon site →
+          </a>
         </div>
       </div>
     </section>

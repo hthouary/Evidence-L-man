@@ -1,26 +1,31 @@
 import { TrendingUp, Eye, ShieldCheck, MapPin } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
+import { siteConfig } from "@/lib/config";
 
 const stats = [
   {
     value: "98 %",
     label: "des consommateurs recherchent un commerce local en ligne avant de se déplacer",
     source: "BrightLocal, 2023",
+    href: "https://brightlocal.com/research/local-consumer-review-survey/",
   },
   {
     value: "75 %",
     label: "de la crédibilité d'une entreprise est jugée d'après la qualité de son site",
     source: "Stanford Web Credibility Research",
+    href: "https://credibility.stanford.edu/",
   },
   {
     value: "76 %",
     label: "des recherches locales sur mobile aboutissent à une visite en boutique sous 24 h",
-    source: "Google",
+    source: "Think with Google",
+    href: "https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/local-search-mobile-statistics/",
   },
   {
     value: "2 ×",
     label: "plus de revenus générés par les PME disposant d'une présence web professionnelle",
     source: "Deloitte, Connected Small Business",
+    href: "https://www2.deloitte.com/uk/en/pages/technology/articles/connected-small-businesses.html",
   },
 ];
 
@@ -67,13 +72,20 @@ export default function Benefits() {
           {stats.map((s, i) => (
             <Reveal key={s.source} delay={i * 80}>
               <div className="flex h-full flex-col bg-white/[0.04] p-8">
-                <div className="mb-3 text-5xl font-bold tracking-tight text-[#7A9B8E] lg:text-6xl">
+                <div className="mb-3 text-5xl font-bold tracking-tight text-white lg:text-6xl">
                   {s.value}
                 </div>
                 <p className="flex-1 text-sm font-light leading-relaxed text-white/70">
                   {s.label}
                 </p>
-                <p className="mt-4 text-xs text-white/30">{s.source}</p>
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 text-xs text-[#7A9B8E] underline underline-offset-2 transition-colors hover:text-white"
+                >
+                  {s.source} ↗
+                </a>
               </div>
             </Reveal>
           ))}
@@ -96,7 +108,7 @@ export default function Benefits() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom quote + CTA */}
         <Reveal className="mt-16 text-center">
           <p className="text-lg font-light text-white/60">
             46 % de toutes les recherches Google ont une intention locale.{" "}
@@ -104,6 +116,14 @@ export default function Benefits() {
               La question n&apos;est plus si vous avez besoin d&apos;un site — mais si vos concurrents vous ont déjà devancé.
             </span>
           </p>
+          <a
+            href={siteConfig.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#7A9B8E] px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-105"
+          >
+            Prendre rendez-vous gratuit →
+          </a>
         </Reveal>
       </div>
     </section>

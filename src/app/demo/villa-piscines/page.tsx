@@ -122,7 +122,7 @@ export default function VillaPiscinesDemo() {
       {/* Hero */}
       <section className="relative flex min-h-[88vh] items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80"
           alt="Piscine de luxe"
           fill
           priority

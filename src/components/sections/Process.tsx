@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/config";
+
 const steps = [
   {
     number: "01",
@@ -60,6 +62,16 @@ export default function Process() {
             ))}
           </div>
         </ol>
+        <div className="mt-12 text-center">
+          <a
+            href={siteConfig.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#1E3A5F] px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-105"
+          >
+            Démarrer mon projet →
+          </a>
+        </div>
       </div>
     </section>
   );

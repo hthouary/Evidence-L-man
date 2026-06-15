@@ -72,6 +72,16 @@ export const siteConfig = {
         "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=80",
       url: "/demo/villa-piscines" as string | null,
     },
+    {
+      id: "salle-sport",
+      name: "Énergie Gym",
+      type: "Salle de sport",
+      description:
+        "Site dynamique pour une salle de fitness avec tarifs, cours collectifs et réservation d'essai.",
+      image:
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
+      url: "/demo/salle-sport" as string | null,
+    },
   ],
   sectors: [
     "Restaurants",
@@ -80,6 +90,7 @@ export const siteConfig = {
     "Garages",
     "Artisans",
     "Piscinistes",
+    "Salles de sport",
     "Paysagistes",
     "Cavistes",
     "Instituts",

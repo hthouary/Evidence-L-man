@@ -20,8 +20,8 @@ export default function Home() {
       <Sectors />
       <Problem />
       <Solution />
-      <Realisations />
       <Benefits />
+      <Realisations />
       <Process />
       <Testimonials />
       <Pricing />

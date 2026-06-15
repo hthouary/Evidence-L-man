@@ -94,7 +94,7 @@ export default function Pricing() {
               <span className="text-sm text-white/50">/mois</span>
             </div>
             <p className="relative mt-3 text-sm font-light text-white/50">
-              3 mois d&apos;essai sans engagement, puis engagement 3+9 mois (12 mois au total).
+              3 mois d&apos;essai sans engagement, puis engagement 12 mois.
             </p>
             <ul className="relative mt-7 space-y-3">
               {features.map((f) => (
