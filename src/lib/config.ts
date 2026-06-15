@@ -7,7 +7,7 @@ export const siteConfig = {
   email: "contact@evidencelemanl.ch",
   phone: "+33 6 00 00 00 00",
   whatsapp: "https://wa.me/33600000000",
-  calendly: "https://calendly.com/hugo-thouary-digital",
+  calendly: "https://calendly.com/hugo-thouary-digital/parlez-moi-de-votre-projet",
   address: "Haute-Savoie, France",
   // Affiche / masque les canaux de contact. Passe à `true` pour réactiver.
   contactChannels: {

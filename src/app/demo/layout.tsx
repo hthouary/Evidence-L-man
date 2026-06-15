@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { siteConfig } from "@/lib/config";
+
+// Les pages démo ne doivent pas être indexées par Google
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default function DemoLayout({
   children,
