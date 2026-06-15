@@ -32,6 +32,9 @@ export default function DemoPreview({ url }: DemoPreviewProps) {
         src={url}
         title="Aperçu du site"
         style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
           width: "1280px",
           height: "880px",
           transform: `scale(${scale})`,
