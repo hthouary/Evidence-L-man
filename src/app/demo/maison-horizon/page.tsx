@@ -98,7 +98,7 @@ const reviews = [
 
 export default function MaisonHorizonDemo() {
   return (
-    <div className="bg-[#f6f1ea] text-[#3a322b]">
+    <div className="overflow-x-hidden bg-[#f6f1ea] text-[#3a322b]">
       {/* Nav */}
       <header className="sticky top-10 z-20 border-b border-[#3a322b]/8 bg-[#f6f1ea]/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">

@@ -1,8 +1,10 @@
 import { siteConfig } from "@/lib/config";
 
-export default function Sectors() {
-  const items = [...siteConfig.sectors, ...siteConfig.sectors];
+// 4 copies → animation at -25% = exactly 1 copy scrolled → seamless on any screen width
+const base = siteConfig.sectors;
+const items = [...base, ...base, ...base, ...base];
 
+export default function Sectors() {
   return (
     <section className="border-y border-[#1E3A5F]/8 bg-white py-10">
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">

@@ -84,7 +84,7 @@ export default function Pricing() {
                 Abonnement mensuel
               </span>
               <span className="rounded-full border border-emerald-400/30 bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-300">
-                3 mois offerts
+                3 mois d&apos;essai
               </span>
             </div>
             <div className="relative mt-4 flex items-baseline gap-1.5">
@@ -94,8 +94,7 @@ export default function Pricing() {
               <span className="text-sm text-white/50">/mois</span>
             </div>
             <p className="relative mt-3 text-sm font-light text-white/50">
-              Engagement {siteConfig.pricing.commitment} mois. Résiliable avec
-              préavis d&apos;un mois.
+              3 mois d&apos;essai sans engagement, puis engagement 3+9 mois (12 mois au total).
             </p>
             <ul className="relative mt-7 space-y-3">
               {features.map((f) => (

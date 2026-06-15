@@ -93,7 +93,7 @@ const reviews = [
 
 export default function AtelierHorizonDemo() {
   return (
-    <div className="bg-[#f4efe6] text-[#2c241b]">
+    <div className="overflow-x-hidden bg-[#f4efe6] text-[#2c241b]">
       {/* Nav */}
       <header className="sticky top-10 z-20 border-b border-[#2c241b]/8 bg-[#f4efe6]/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
@@ -355,21 +355,48 @@ export default function AtelierHorizonDemo() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-4">
-              <a
-                href="#"
-                className="rounded-full bg-[#8a5a2b] px-8 py-5 text-center text-sm font-medium text-white transition-transform hover:scale-105"
-              >
-                Demander un devis gratuit
-              </a>
+            <div className="flex flex-col gap-4">
+              <div className="rounded-xl border border-[#8a5a2b]/30 bg-[#8a5a2b]/10 p-6">
+                <p className="mb-4 text-sm font-medium text-[#d9a86a]">Demander un devis gratuit</p>
+                <div className="grid gap-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <input
+                      type="text"
+                      placeholder="Votre prénom"
+                      className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-[#f4efe6] placeholder:text-[#f4efe6]/30 focus:border-[#8a5a2b]/50 focus:outline-none"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Téléphone"
+                      className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-[#f4efe6] placeholder:text-[#f4efe6]/30 focus:border-[#8a5a2b]/50 focus:outline-none"
+                    />
+                  </div>
+                  <select className="rounded border border-white/10 bg-[#2c241b] px-4 py-3 text-sm text-[#f4efe6]/70 focus:border-[#8a5a2b]/50 focus:outline-none">
+                    <option>Type de projet</option>
+                    <option>Mobilier sur mesure</option>
+                    <option>Cuisine</option>
+                    <option>Dressing / agencement</option>
+                    <option>Escalier</option>
+                    <option>Autre</option>
+                  </select>
+                  <textarea
+                    placeholder="Décrivez brièvement votre projet..."
+                    rows={3}
+                    className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-[#f4efe6] placeholder:text-[#f4efe6]/30 focus:border-[#8a5a2b]/50 focus:outline-none resize-none"
+                  />
+                </div>
+                <button className="mt-4 w-full rounded-full bg-[#8a5a2b] py-3.5 text-sm font-medium text-white transition-transform hover:scale-[1.02]">
+                  Envoyer ma demande
+                </button>
+              </div>
               <a
                 href="tel:+33450000000"
-                className="flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-5 text-sm font-medium transition-colors hover:bg-white/10"
+                className="flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-[#f4efe6] transition-colors hover:bg-white/10"
               >
                 <Phone size={16} /> Appeler l&apos;atelier
               </a>
               <p className="text-center text-sm text-[#f4efe6]/40">
-                Dévis gratuit · Réponse sous 48h · Sans engagement
+                Devis gratuit · Réponse sous 48h · Sans engagement
               </p>
             </div>
           </div>

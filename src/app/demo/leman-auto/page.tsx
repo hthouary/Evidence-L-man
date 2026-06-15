@@ -79,7 +79,7 @@ const faq = [
 export default function LemanAutoDemo() {
   return (
     <div
-      className="bg-[#0e1116] text-[#e7ebf0]"
+      className="overflow-x-hidden bg-[#0e1116] text-[#e7ebf0]"
       style={{ fontFamily: "var(--font-grotesk)" }}
     >
       {/* Nav */}
@@ -319,15 +319,40 @@ export default function LemanAutoDemo() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <a
-              href="#"
-              className="flex items-center justify-center gap-2 rounded-md bg-[#2f7bff] px-7 py-5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
-            >
-              <CalendarDays size={18} /> Réserver un créneau en ligne
-            </a>
+            <div className="rounded-xl border border-white/8 bg-white/[0.03] p-6">
+              <p className="mb-4 text-sm font-semibold text-[#5b97ff]">Demande de rendez-vous</p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <input
+                  type="text"
+                  placeholder="Prénom Nom"
+                  className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[#2f7bff]/50 focus:outline-none"
+                />
+                <input
+                  type="tel"
+                  placeholder="Téléphone"
+                  className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[#2f7bff]/50 focus:outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Marque et modèle"
+                  className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[#2f7bff]/50 focus:outline-none"
+                />
+                <select className="rounded-md border border-white/10 bg-[#0e1116] px-4 py-3 text-sm text-white/70 focus:border-[#2f7bff]/50 focus:outline-none">
+                  <option>Type d&apos;intervention</option>
+                  <option>Révision / entretien</option>
+                  <option>Diagnostic</option>
+                  <option>Freinage</option>
+                  <option>Pneumatiques</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <button className="mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-[#2f7bff] py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]">
+                <CalendarDays size={16} /> Demander un créneau
+              </button>
+            </div>
             <a
               href="tel:+33450000000"
-              className="flex items-center justify-center gap-2 rounded-md border border-white/20 px-7 py-5 text-sm font-semibold transition-colors hover:bg-white/5"
+              className="flex items-center justify-center gap-2 rounded-md border border-white/20 px-7 py-4 text-sm font-semibold transition-colors hover:bg-white/5"
             >
               <Phone size={18} /> Appeler le garage
             </a>

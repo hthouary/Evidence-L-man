@@ -4,6 +4,7 @@ import Sectors from "@/components/sections/Sectors";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
 import Realisations from "@/components/sections/Realisations";
+import Benefits from "@/components/sections/Benefits";
 import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import Pricing from "@/components/sections/Pricing";
@@ -20,6 +21,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <Realisations />
+      <Benefits />
       <Process />
       <Testimonials />
       <Pricing />

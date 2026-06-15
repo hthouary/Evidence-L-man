@@ -87,7 +87,7 @@ const reviews = [
 export default function RestaurantDemo() {
   return (
     <div
-      className="bg-[#16110c] text-[#efe7d8]"
+      className="overflow-x-hidden bg-[#16110c] text-[#efe7d8]"
       style={{ fontFamily: "var(--font-cormorant)" }}
     >
       {/* Nav */}
@@ -249,7 +249,7 @@ export default function RestaurantDemo() {
               Nos menus
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {menus.map((m) => (
               <div
                 key={m.name}
@@ -431,22 +431,39 @@ export default function RestaurantDemo() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-4">
+            <div className="flex flex-col gap-4">
+              <div className="rounded-sm border border-white/10 bg-[#1d1610] p-6">
+                <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#c8a45c]">Réservation en ligne</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    placeholder="Votre nom"
+                    className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[#c8a45c]/50 focus:outline-none"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Téléphone"
+                    className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[#c8a45c]/50 focus:outline-none"
+                  />
+                  <input
+                    type="date"
+                    className="rounded border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/70 focus:border-[#c8a45c]/50 focus:outline-none"
+                  />
+                  <select className="rounded border border-white/10 bg-[#1d1610] px-4 py-3 text-sm text-white/70 focus:border-[#c8a45c]/50 focus:outline-none">
+                    <option>Nombre de couverts</option>
+                    {[1,2,3,4,5,6,"7+"].map(n => <option key={n}>{n} {typeof n === 'number' && n > 1 ? 'personnes' : typeof n === 'number' ? 'personne' : 'personnes'}</option>)}
+                  </select>
+                </div>
+                <button className="mt-4 w-full rounded-full bg-[#c8a45c] py-3.5 text-sm uppercase tracking-[0.2em] text-[#16110c] transition-transform hover:scale-[1.02]">
+                  Confirmer la réservation
+                </button>
+              </div>
               <a
                 href="tel:+33400000000"
-                className="flex items-center justify-center gap-3 rounded-full bg-[#c8a45c] px-8 py-5 text-sm uppercase tracking-[0.2em] text-[#16110c] transition-transform hover:scale-105"
+                className="flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 text-sm uppercase tracking-[0.2em] text-white transition-colors hover:border-[#c8a45c] hover:text-[#c8a45c]"
               >
-                <Phone size={18} /> 04 50 00 00 00
+                <Phone size={16} /> 04 50 00 00 00
               </a>
-              <a
-                href="#"
-                className="flex items-center justify-center rounded-full border border-white/30 px-8 py-5 text-sm uppercase tracking-[0.2em] text-white transition-colors hover:border-[#c8a45c] hover:text-[#c8a45c]"
-              >
-                Réserver en ligne
-              </a>
-              <p className="text-center text-sm text-white/40">
-                Groupes & privatisations : contactez-nous directement
-              </p>
             </div>
           </div>
         </div>

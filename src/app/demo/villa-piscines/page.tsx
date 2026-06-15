@@ -96,7 +96,7 @@ const faq = [
 
 export default function VillaPiscinesDemo() {
   return (
-    <div className="bg-white text-[#0c2e36]">
+    <div className="overflow-x-hidden bg-white text-[#0c2e36]">
       {/* Nav */}
       <header className="sticky top-10 z-20 border-b border-[#0c2e36]/8 bg-white/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -355,25 +355,50 @@ export default function VillaPiscinesDemo() {
               </ul>
             </div>
             <div className="flex flex-col gap-4">
-              <a
-                href="#"
-                className="rounded-full bg-white px-8 py-5 text-center text-sm font-semibold text-[#0aa3b8] transition-transform hover:scale-105"
-              >
-                Demander mon devis gratuit
-              </a>
+              <div className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur">
+                <p className="mb-4 text-sm font-semibold text-white">Demande de devis gratuit</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    placeholder="Votre nom"
+                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Téléphone"
+                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"
+                  />
+                  <select className="rounded-xl border border-white/20 bg-[#0a8fa1] px-4 py-3 text-sm text-white focus:border-white/40 focus:outline-none">
+                    <option>Type de projet</option>
+                    <option>Construction béton</option>
+                    <option>Piscine à coque</option>
+                    <option>Couloir de nage</option>
+                    <option>Rénovation</option>
+                    <option>Entretien</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Commune"
+                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"
+                  />
+                </div>
+                <button className="mt-4 w-full rounded-full bg-white py-3.5 text-sm font-semibold text-[#0aa3b8] transition-transform hover:scale-[1.02]">
+                  Demander mon devis gratuit
+                </button>
+              </div>
               <a
                 href="tel:+33450000000"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-8 py-5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               >
                 <Phone size={16} /> 04 50 00 00 00
               </a>
-              <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white">
+              <div className="rounded-2xl border border-white/20 bg-white/10 p-4 text-white">
                 <div className="flex items-center gap-2 text-sm">
-                  <MapPin size={16} />
+                  <MapPin size={14} />
                   <span>Zone Industrielle, 74200 Thonon-les-Bains</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-sm text-white/80">
-                  <Clock size={16} />
+                  <Clock size={14} />
                   <span>Lun – Ven 8h – 18h · Sam 9h – 12h</span>
                 </div>
               </div>

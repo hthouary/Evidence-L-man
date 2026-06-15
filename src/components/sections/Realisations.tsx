@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/config";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
+import DemoPreview from "@/components/ui/DemoPreview";
 
 const typeColors: Record<string, string> = {
   Restaurant: "bg-amber-50 text-amber-700",
@@ -29,24 +29,23 @@ function DemoCard({
         rel={external ? "noopener noreferrer" : undefined}
         className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#1E3A5F]/8 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1E3A5F]/15 hover:shadow-2xl hover:shadow-[#1E3A5F]/10"
       >
-        {/* Screenshot */}
+        {/* Screenshot — real iframe preview */}
         <div className="relative overflow-hidden">
           {/* Browser chrome */}
           <div className="flex items-center gap-1.5 bg-[#f0efea] px-4 py-2.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+            <span className="ml-2 flex-1 rounded bg-white/60 px-3 py-0.5 text-[10px] text-[#888] truncate">
+              evidencelemanl.ch{demo.url}
+            </span>
           </div>
-          <div className="relative aspect-[16/11] overflow-hidden">
-            <Image
-              src={demo.image}
-              alt={`Aperçu du site ${demo.name}`}
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0" />
-            <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+          <div className="relative overflow-hidden transition-transform duration-700 group-hover:scale-[1.02]">
+            {demo.url ? (
+              <DemoPreview url={demo.url} />
+            ) : null}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
+            <div className="pointer-events-none absolute bottom-3 left-4 right-4 flex items-end justify-between">
               <span className="text-lg font-semibold text-white drop-shadow">
                 {demo.name}
               </span>
