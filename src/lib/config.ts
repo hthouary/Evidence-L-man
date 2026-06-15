@@ -151,7 +151,7 @@ export const siteConfig = {
     {
       question: "Que se passe-t-il après les 3 mois d'essai ?",
       answer:
-        "L'abonnement mensuel de 49 €/mois continue automatiquement. Vous pouvez résilier à tout moment en respectant un préavis d'un mois.",
+        "Pendant les 3 premiers mois, vous êtes complètement libre : si le site ne vous convient pas, vous arrêtez sans frais ni justification. Si vous êtes satisfait — et nos clients le sont — vous continuez avec un engagement de 12 mois à 49 €/mois. C'est une façon pour nous de vous prouver la valeur du service avant toute forme d'engagement.",
     },
   ],
 };
